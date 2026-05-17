@@ -5,9 +5,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Railway working"}
-
-
-@app.get("/health")
-async def health():
-    return {"status": "ok"}
+    return {"message": "Vercel working"}
