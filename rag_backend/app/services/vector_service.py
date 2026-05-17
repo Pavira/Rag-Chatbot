@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
-from app.core.config import settings
+from rag_backend.app.core.config import settings
 
 DOCUMENT_ID = "dccdc53f-690e-4560-bde7-bbbc60f14ef9"
 

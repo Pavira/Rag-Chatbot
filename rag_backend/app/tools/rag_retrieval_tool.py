@@ -1,8 +1,8 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from langchain_core.tools import tool
 
-from app.services.retrieval_service import retrieval_service
-from app.utils.helpers import format_context
+from rag_backend.app.services.retrieval_service import retrieval_service
+from rag_backend.app.utils.helpers import format_context
 
 
 def build_hybrid_retrieval_tool(

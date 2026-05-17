@@ -4,13 +4,13 @@ import traceback
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.database import get_db
+from rag_backend.app.core.database import get_db
 
-from app.services.embedding_service import embedding_service
-from app.services.llm_service import llm_service
-from app.services.memory_service import memory_service
+from rag_backend.app.services.embedding_service import embedding_service
+from rag_backend.app.services.llm_service import llm_service
+from rag_backend.app.services.memory_service import memory_service
 
-from app.schemas.chat import ChatRequest, ChatResponse
+from rag_backend.app.schemas.chat import ChatRequest, ChatResponse
 
 router = APIRouter()
 

@@ -1,9 +1,8 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.services.vector_service import vector_service
-from app.services.bm25_service import bm25_service
-
-from app.core.config import settings
+from rag_backend.app.services.vector_service import vector_service
+from rag_backend.app.services.bm25_service import bm25_service
+from rag_backend.app.core.config import settings
 
 
 class RetrievalService:

@@ -2,9 +2,9 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.database import get_db
-from app.services.memory_service import memory_service
-from app.schemas.chat import SessionDeleteResponse, SessionCreateResponse
+from rag_backend.app.core.database import get_db
+from rag_backend.app.services.memory_service import memory_service
+from rag_backend.app.schemas.chat import SessionDeleteResponse, SessionCreateResponse
 
 router = APIRouter()
 

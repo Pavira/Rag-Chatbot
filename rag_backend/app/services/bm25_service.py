@@ -1,8 +1,8 @@
 from rank_bm25 import BM25Okapi
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.models.chunk import DocumentChunk
-from app.core.config import settings
+from rag_backend.app.models.chunk import DocumentChunk
+from rag_backend.app.core.config import settings
 
 DOCUMENT_ID = "dccdc53f-690e-4560-bde7-bbbc60f14ef9"
 
