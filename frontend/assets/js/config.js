@@ -2,7 +2,7 @@
  * Global configuration for Agentic Bot frontend
  */
 
-const API_BASE_URL = "https://rag-chatbot-production-51e8.up.railway.app/"; // Base URL for API requests
+const API_BASE_URL = "https://rag-chatbot-backend-ten.vercel.app/"; // Base URL for API requests
 
 const CONFIG = {
   API_BASE_URL,
