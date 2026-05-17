@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import rag_upload, rag_chat, session
+from rag_backend.app.api.routes import rag_upload, rag_chat, session
 
 # Import all models so SQLAlchemy registers them before init_db
-import app.models.document  # noqa
-import app.models.chunk  # noqa
-import app.models.chat_session  # noqa
-import app.models.chat_message  # noqa
+import rag_backend.app.models.document  # noqa
+import rag_backend.app.models.chunk  # noqa
+import rag_backend.app.models.chat_session  # noqa
+import rag_backend.app.models.chat_message  # noqa
 
 app = FastAPI(
     title="RAG Chatbot API",
