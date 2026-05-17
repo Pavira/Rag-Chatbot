@@ -1,0 +1,123 @@
+/* =============================================
+   global.css — shared tokens & base styles
+   ============================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ── Design tokens ───────────────────────────────────────── */
+:root,
+[data-theme="dark"] {
+  /* surfaces */
+  --bg-page:        #0d0e11;
+  --bg-sidebar:     #111216;
+  --bg-main:        #16181d;
+  --bg-input:       #1e2028;
+  --bg-bubble-user: #2a6ef5;
+  --bg-bubble-ai:   #1e2028;
+  --bg-card:        #1a1c23;
+  --bg-hover:       #23262f;
+
+  /* borders */
+  --border-subtle:  rgba(255,255,255,.07);
+  --border-focus:   #2a6ef5;
+
+  /* text */
+  --text-primary:   #e8eaf0;
+  --text-secondary: #8b90a0;
+  --text-muted:     #555a6e;
+  --text-accent:    #2a6ef5;
+  --text-on-accent: #ffffff;
+
+  /* status */
+  --color-success:  #22c55e;
+  --color-danger:   #ef4444;
+  --color-warning:  #f59e0b;
+  --color-info:     #38bdf8;
+
+  /* misc */
+  --radius-sm:      8px;
+  --radius-md:      14px;
+  --radius-lg:      20px;
+  --radius-xl:      28px;
+  --shadow-card:    0 4px 24px rgba(0,0,0,.5);
+  --shadow-input:   0 0 0 3px rgba(42,110,245,.25);
+  --font-sans:      "Sora", sans-serif;
+  --font-mono:      "JetBrains Mono", monospace;
+  --transition:     0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg-page:        #f4f5f8;
+  --bg-sidebar:     #ffffff;
+  --bg-main:        #f9fafb;
+  --bg-input:       #ffffff;
+  --bg-bubble-user: #2a6ef5;
+  --bg-bubble-ai:   #ffffff;
+  --bg-card:        #ffffff;
+  --bg-hover:       #f1f3f8;
+
+  --border-subtle:  rgba(0,0,0,.08);
+  --border-focus:   #2a6ef5;
+
+  --text-primary:   #111318;
+  --text-secondary: #555a6e;
+  --text-muted:     #9aa0b3;
+  --text-accent:    #2a6ef5;
+  --text-on-accent: #ffffff;
+
+  --shadow-card:    0 4px 24px rgba(0,0,0,.1);
+  --shadow-input:   0 0 0 3px rgba(42,110,245,.2);
+}
+
+/* ── Base reset ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+a { color: var(--text-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Custom scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--text-muted); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* ── Toast container ────────────────────────────────────── */
+#toastContainer {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-width: 280px;
+}
+
+.toast {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.toast .btn-close-white { filter: invert(1) grayscale(1) opacity(0.5); }
+[data-theme="light"] .toast .btn-close-white { filter: none; }
+
+.toast-success { border-left: 3px solid var(--color-success); }
+.toast-danger  { border-left: 3px solid var(--color-danger);  }
+.toast-warning { border-left: 3px solid var(--color-warning); }
+.toast-info    { border-left: 3px solid var(--color-info);    }
+
+/* ── Utility ────────────────────────────────────────────── */
+.highlight { color: var(--text-accent); }
