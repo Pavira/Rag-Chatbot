@@ -2,7 +2,6 @@
 name = "rag-backend"
 version = "0.1.0"
 description = "RAG Backend using FastAPI, Gemini, PGVector, and BM25"
-readme = "README.md"
 requires-python = ">=3.12,<3.13"
 
 dependencies = [
@@ -78,3 +77,6 @@ dependencies = [
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
