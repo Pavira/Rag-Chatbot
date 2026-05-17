@@ -145,8 +145,6 @@ Content-Type: application/json
 }
 ```
 
-> If `session_id` is omitted or invalid, a new session is created automatically.
-
 ---
 
 ### 3. Create Session

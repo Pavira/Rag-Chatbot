@@ -43,3 +43,8 @@ app.include_router(session.router, prefix="/rag", tags=["Session"])
 @app.get("/health", tags=["Health"])
 async def health_check():
     return {"status": "ok", "message": "RAG Chatbot API is running."}
+
+
+@app.get("/")
+async def root():
+    return {"message": "API running"}
