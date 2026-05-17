@@ -10,14 +10,14 @@ from sqlalchemy.ext.asyncio import AsyncSession
 import fitz
 from docx import Document as DocxDocument
 
-from rag_backend.app.core.database import get_db
-from rag_backend.app.models.document import Document
-from rag_backend.app.models.chunk import DocumentChunk
-from rag_backend.app.schemas.upload import UploadResponse
-from rag_backend.app.core.config import settings
-from rag_backend.app.services.document_service import document_service
-from rag_backend.app.services.chunking_service import chunking_service
-from rag_backend.app.services.embedding_service import embedding_service
+from app.core.database import get_db
+from app.models.document import Document
+from app.models.chunk import DocumentChunk
+from app.schemas.upload import UploadResponse
+from app.core.config import settings
+from app.services.document_service import document_service
+from app.services.chunking_service import chunking_service
+from app.services.embedding_service import embedding_service
 
 router = APIRouter()
 
