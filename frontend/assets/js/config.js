@@ -2,7 +2,7 @@
  * Global configuration for Agentic Bot frontend
  */
 
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://rag-chatbot-virid-seven.vercel.app";
 
 const CONFIG = {
   API_BASE_URL,
