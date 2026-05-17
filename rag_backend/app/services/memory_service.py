@@ -1,8 +1,8 @@
 import uuid
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, delete
-from rag_backend.app.models.chat_session import ChatSession
-from rag_backend.app.models.chat_message import ChatMessage
+from app.models.chat_session import ChatSession
+from app.models.chat_message import ChatMessage
 
 
 class MemoryService:

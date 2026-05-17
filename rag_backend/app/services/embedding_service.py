@@ -4,7 +4,7 @@ import pandas as pd
 from google import genai
 from google.genai import types
 
-from rag_backend.app.core.config import settings
+from app.core.config import settings
 
 
 class EmbeddingService:

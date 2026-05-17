@@ -2,7 +2,7 @@ import uuid
 from sqlalchemy import String, Text, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from pgvector.sqlalchemy import Vector
-from rag_backend.app.core.database import Base
+from app.core.database import Base
 
 
 class DocumentChunk(Base):

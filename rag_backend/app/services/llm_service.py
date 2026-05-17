@@ -8,8 +8,8 @@ from langchain.agents import (
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-from rag_backend.app.core.config import settings
-from rag_backend.app.tools.rag_retrieval_tool import (
+from app.core.config import settings
+from app.tools.rag_retrieval_tool import (
     build_hybrid_retrieval_tool,
 )
 
